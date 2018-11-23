@@ -20,9 +20,9 @@ if username is None or password is None:
   print('---- please provide login credential for sign-in')
   print('usage: python filename --usernam username --password password')
   exit()
-
 driver = webdriver.Firefox()
-driver.get (target_url)
+assert 'ALICE' in driver.title
+driver.get(target_url)
 driver.find_element_by_id("userName").send_keys(username)
 driver.find_element_by_id("password").send_keys(password)
 
